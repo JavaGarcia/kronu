@@ -12,11 +12,11 @@ The magic is create a UDP tunnel through a NAT traversal so establish and mainta
 
 #<img src="https://raw.githubusercontent.com/JavaGarcia/kronu/master/doc/net-d.png">
 
-###Usage kronu
+###Run kronu
 ```sh
 node kronu.js {IP-kserver} {Port-kserver} {IP-local} {Port-local service} [Remote Port]
 ```
-###Usage kserver
+###Run kserver
 ```sh
 node kserver.js {IP-public} {Port-public}
 ```
