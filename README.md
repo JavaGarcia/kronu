@@ -14,11 +14,11 @@ The magic is create a UDP tunnel through a NAT traversal so establish and mainta
 
 ###Run kronu
 ```sh
-node kronu.js {IP-kserver} {Port-kserver} {IP-local} {Port-local service} [Remote Port]
+node kronu.js <IP-kserver> <Port-kserver> <IP-local> <Port-localService> [Remote Port]
 ```
 ###Run kserver
 ```sh
-node kserver.js {IP-public} {Port-public}
+node kserver.js <IP-public> <Port-public>
 ```
 ### Made with :heart: in Colombia.
 ## License:
