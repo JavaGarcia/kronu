@@ -4,18 +4,19 @@ var net = require('net');
 
 var clientServer = {
 		name : "dev",//generate random name or user name
-		fport: 33333,
-		rport: null // input - arg, remote port
+		fport: process.argv[5],
+		rport: process.argv[6] || null, // input - arg, remote port
+		address: process.argv[4]
 	};
 var ulink = {
-		address: '192.168.14.75',
-		port: 6666
+		address: process.argv[2],
+		port: process.argv[3]
 };
 
 
 
 var udp_in = dgram.createSocket('udp4');
-
+/*
 var getNetworkIP = function(callback) {
   var socket = net.createConnection(80, ulink.address);
   socket.on('connect', function() {
@@ -28,7 +29,7 @@ var getNetworkIP = function(callback) {
      callback(undefined, "192.168.14.75");
   });
 }
-
+*/
 var send = function(connection, msg, cb) {
 	var data;
 	if(connection.raw){
@@ -50,14 +51,14 @@ var send = function(connection, msg, cb) {
 
 udp_in.on("listening", function() {
  
-  getNetworkIP(function(error, ip) {
+ // getNetworkIP(function(error, ip) {
     if (error) return console.log("! Unable to obtain connection information!");
     clientServer.address=ip;
     clientServer.port=udp_in.address().port;
 	console.log('# listening as %s@%s:%s', clientServer.name, clientServer.address, clientServer.port);
 	console.log('[< reg]  Register')
     send(ulink, { type: 'register', linfo: clientServer});
-  });
+ // });
 });
 var connections = {};
 //var client = dgram.createSocket('udp4');

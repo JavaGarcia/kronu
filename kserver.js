@@ -1,8 +1,8 @@
 var dgram = require('dgram');
 
 var udp_matchmaker = dgram.createSocket('udp4');
-var udp_port = 6666;
-var udp_HOST = "192.168.14.75"
+var udp_port = process.argv[3]
+var udp_HOST = process.argv[2]
 
 var clients = {};
 
