@@ -52,8 +52,8 @@ var send = function(connection, msg, cb) {
 udp_in.on("listening", function() {
  
  // getNetworkIP(function(error, ip) {
-    if (error) return console.log("! Unable to obtain connection information!");
-    clientServer.address=ip;
+    //if (error) return console.log("! Unable to obtain connection information!");
+    //clientServer.address=ip;
     clientServer.port=udp_in.address().port;
 	console.log('# listening as %s@%s:%s', clientServer.name, clientServer.address, clientServer.port);
 	console.log('[< reg]  Register')
