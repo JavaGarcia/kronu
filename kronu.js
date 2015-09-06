@@ -96,7 +96,7 @@ udp_in.on('message', function(data, rinfo) {
 						if(rinfo.address!=clientServer.address && rinfo.port!=clientServer.fport){
 							console.log("[ATTENTION] msj input original client")
 							connections[link].client.send(data2, 0, data2.length, clientServer.fport, clientServer.address, function(err) {
-								if(err)}{console.log(err)}								
+								if(err){console.log(err)}								
 							});
 						}else{
 							connections[link].client.send(data2, 0, data2.length, connections[link].port, connections[link].address, function(err) {
