@@ -100,7 +100,7 @@ udp_in.on('message', function(data, rinfo) {
 							});
 						}else{
 							connections[link].client.send(data2, 0, data2.length, connections[link].port, connections[link].address, function(err) {
-								if(err)}{console.log(err)}
+								if(err){console.log(err)}
 							});
 						}
 					});
