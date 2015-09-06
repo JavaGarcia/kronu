@@ -12,7 +12,7 @@ udp_matchmaker.on('listening', function() {
 });
 
 udp_matchmaker.on('message', function(data, rinfo) {
-  try
+  try{
 	
     data = JSON.parse(data);
   } catch (e) {
