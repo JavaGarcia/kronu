@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/JavaGarcia/kronu/master/doc/kronu.png">
 </p>
+(:warning:New version and public server, in February 2016:warning:) 
 
 Now you can publish any UDP service behind a NAT or firewall, through Kronu.
 
